@@ -4,10 +4,14 @@
 function navigation_slide () {
     const burger = document.querySelector('.burger');
     const navigation = document.querySelector('.primary-navigation');
-    const navigation_links = document.querySelectorAll('.primary-navigation a');
+    const navigation_links = document.querySelectorAll('.primary-navigation li');
 
     burger.addEventListener('click', () => {
-        navigation.classList.toggle('navigation-active');
+        if(navigation.getAttribute("state") == "active") {
+            navigation.setAttribute("state", "inactive");
+        } else {
+            navigation.setAttribute("state", "active");
+        }
 
         navigation_links.forEach( (link, index) => {
             if (link.style.animation) {

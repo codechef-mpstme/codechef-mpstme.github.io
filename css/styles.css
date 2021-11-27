@@ -39,9 +39,6 @@
 }
 
 @media (max-width: 35em) {
-    body {
-        overflow-x: hidden;
-    }
 
     .primary-navigation {
         position: fixed;
@@ -52,13 +49,15 @@
         backdrop-filter: blur(1rem);
         align-items: center;
         transform: translateX(100%);
-        transition: transform 0.3s ease-in;
         z-index: 900;
+    }
+
+    .primary-navigation li {
+        opacity: 0;
     }
 
     .primary-navigation a {
         color: white;
-        opacity: 0;
     }
 
     .burger {
@@ -66,8 +65,14 @@
     }
 }
 
-.navigation-active {
+.primary-navigation[state="active"] {
     transform: translateX(0%);
+    transition: transform 0.3s ease-in;
+}
+
+.primary-navigation[state="inactive"] {
+    transform: translateX(100%);
+    transition: transform 0.3s ease-out;
 }
 
 @keyframes naviagtionLinkFade {
