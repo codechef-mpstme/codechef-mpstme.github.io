@@ -7,10 +7,11 @@
     <title>Codechef</title>
     <link rel="stylesheet" href="css/styles.css" type="text/css">
     <link rel="icon" href="img/logo.png" type="image/icon">
+    <script src="js/script.js" defer></script>
 </head>
 <body>
     <!-- Primary header -->
-    <header class="primary-header flex">
+    <header class="primary-header flex sticky">
 
         <!-- Logo -->
         <div class="logo">
@@ -20,20 +21,14 @@
         <!-- Links -->
         <nav>
             <ul class="primary-navigation flex">
-                <li>
-                    <a href="#about">
-                        About
-                    </a>
+                <li id="about-link">
+                    About
                 </li>
-                <li>
-                    <a href="#events">
-                        Events
-                    </a>
+                <li id="event-link">
+                    Events
                 </li>
-                <li>
-                    <a href="#contact">
-                        Contact
-                    </a>
+                <li id="contact-link">
+                    Contact
                 </li>
             </ul>
         </nav>
@@ -46,6 +41,74 @@
         </div>
     </header>
 
-    <script src="js/script.js"></script>
+    <br><br>
+
+    <div class="intro flex">
+        <div>
+            <img src="img/landing.png">
+        </div>
+        <div class="intro-content">
+            <h2>What is <span>Codechef</span> <div class="intro-type"><span>Chapter?</span></div></h2>
+            <p>
+                The CodeChef College Chapters is a <br>
+                close-knit community where everyone <br>
+                shares highlights and best practices <br>
+                from their events. This pushes <br>
+                everyone to give their best and create <br>
+                a culture of learning.
+            </p>
+        </div>
+    </div>
+
+    <div class="about">
+        <h2 class="category-header" id="about">
+            About Us
+        </h2>
+
+        <div class="card-container flex">
+            <div class="about-card">
+                <div class="about-header">What is Codechef MPSTME?</div>
+                <div class="about-content">
+                    Established in the year 2020 as a
+                    student college chapter of
+                    Codechef, we aim to give the
+                    students the ability to learn the
+                    skills they’d need to succeed in
+                    the world where technology is
+                    pacing at an astronomical rate.
+                    Our mantra is to foster practice
+                    and learning in a fun way.
+                </div>
+            </div>
+            <div class="about-card">
+                <div class="about-header">What we do</div>
+                <div class="about-content">
+                    Since our inception, we have
+                    successfully organised many
+                    industrial and academic events
+                    which have helped the
+                    participants ace through the
+                    world of programming and get
+                    inspired by the best developers.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="events" id="events">
+        <h2 class="category-header" id="events">
+            Events
+        </h2>
+        <button id="events-toggle">toggle</button>
+
+        <div class="events-upcoming"></div>
+        <div class="events-old hidden"></div>
+    </div>
+
+    <div class="contact" id="contact">
+        <h2 class="category-header">
+            Contact Us
+        </h2>
+    </div>
 </body>
 </html>
